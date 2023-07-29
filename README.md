@@ -3,10 +3,10 @@
 ## Description
 CodeHub SA is an innovative web application designed to foster collaboration and learning within the coding community in South Africa. The platform aims to provide aspiring developers with the tools they need to improve their coding skills, connect with experienced mentors, and participate in coding challenges to enhance their expertise.
 
-## Demo Link:
+## Demo Link
 https://jackspence6.github.io/codehub-sa/
 
-# User Stories:
+# User Stories
 ``````
 As an experienced developer,
 I want to offer mentorship on CodeHub SA,
@@ -37,7 +37,7 @@ I want to receive personalized coding recommendations on CodeHub SA,
 so, I can explore new coding challenges and projects aligned with my interests.
 ``````
 
-# Acceptance Criteria:
+# Acceptance Criteria
 ``````
 Given an experienced developer wants to offer mentorship,
 when they provide their mentor preferences and availability,
@@ -64,7 +64,7 @@ Given a user accesses CodeHub SA from different devices,
 when they open the app on desktop, tablet, or mobile,
 then the app's layout and functionalities should adapt and remain user-friendly on all devices.
 ``````
-# Technologies:
+# Technologies
 ### Front-End Technologies:
 - Html5
 - CSS3
@@ -87,9 +87,40 @@ then the app's layout and functionalities should adapt and remain user-friendly 
 ### Documentation:
 - README.md
 
-# Features:
+# Features
 - Mentorship Program 
 - Interactive Coding Challenges
 - Collaborative Learning Spaces
 - Resource Library
 - Responsive Design
+
+## License
+
+MIT License
+
+Copyright (c) 2023 Jack Spence
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+## How to Contribute
+
+Please reach out to me if you would like to contribute to this project.
+
+It is requested that all contributors adhere to the standards outlined in the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
