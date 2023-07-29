@@ -72,6 +72,7 @@ then the app's layout and functionalities should adapt and remain user-friendly 
 ### CSS Framework:
 - Materialize CSS
 ### Front-End Libraries:
+- jQuery
 - Moment.js
 ### Server-Side APIs:
 - GitHub API
