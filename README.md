@@ -8,9 +8,6 @@ https://jackspence6.github.io/codehub-sa/
 
 # User Stories:
 ``````
-As a new aspiring developer,
-I want to create a profile on CodeHub SA,
-so, I can join the coding community and access valuable learning resources.
 As an experienced developer,
 I want to offer mentorship on CodeHub SA,
 so, I can help and inspire the next generation of coders.
