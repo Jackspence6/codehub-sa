@@ -52,6 +52,11 @@ body {
   align-items: center;
   padding: 0 10px;
 }
+
+/* Logo Icon */
+nav .brand-logo {
+  font-size: 4.5rem;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
