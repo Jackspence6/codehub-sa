@@ -10,8 +10,12 @@
 /* Element Selectors */
 /******************************************/
 nav {
-  background-color: #24292e;
+  background-color: black;
   height: 5rem;
+}
+
+body {
+  background-color: #24292e;
 }
 /******************************************/
 /* Class Selectors */
