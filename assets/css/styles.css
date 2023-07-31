@@ -27,6 +27,11 @@ nav ul li {
   margin-left: 1rem;
 }
 
+nav ul li a {
+  font-family: "Tektur", cursive;
+  text-decoration: 1px dotted whitesmoke underline;
+}
+
 body {
   background-color: #24292e;
 }
@@ -145,3 +150,12 @@ button {
 /******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
+/* Nav Items when hovered on */
+nav ul a:hover {
+  color: red;
+}
+
+/* Learn More buttons when hovered on */
+.button-container a button:hover {
+  color: red;
+}
