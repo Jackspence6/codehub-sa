@@ -53,6 +53,20 @@ img {
   border-radius: 1rem;
   order: 2;
 }
+
+/* Removing default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  color: #b6b2bf;
+  background-color: #24292e;
+  transition: background-color 0.3s;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
@@ -129,6 +143,17 @@ img {
 .container:nth-child(odd) img {
   order: -1;
 }
+
+/* Centering buttons relative to p tags */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container a {
+  margin-top: 20px;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -140,3 +165,6 @@ img {
 /******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
+button:hover {
+  background-color: #333333;
+}
