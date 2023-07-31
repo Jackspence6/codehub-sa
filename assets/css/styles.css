@@ -5,7 +5,9 @@
 /******************************************/
 /* Universal Selector */
 /******************************************/
-
+html {
+  font-size: 13px; /* 1rem will be 16px */
+}
 /******************************************/
 /* Element Selectors */
 /******************************************/
@@ -14,8 +16,39 @@ nav {
   height: 5rem;
 }
 
+/* Logo Icon */
+nav .brand-logo {
+  font-size: 4.5rem;
+}
+
 body {
   background-color: #24292e;
+}
+
+h1 {
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 2rem;
+  color: white;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: "Tektur", cursive;
+  font-size: 1rem;
+  color: #c9c9c7;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  color: #b6b2bf;
+}
+
+/* Feature Images */
+img {
+  height: 30rem;
+  border-radius: 1rem;
 }
 /******************************************/
 /* Class Selectors */
@@ -53,9 +86,26 @@ body {
   padding: 0 10px;
 }
 
-/* Logo Icon */
-nav .brand-logo {
-  font-size: 4.5rem;
+/* Feature Containers */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Feature Content */
+.content {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10rem;
+}
+
+/* Learn More Button */
+.info-icon-btn {
+  margin-top: 10px;
+  margin-left: 40%;
 }
 /******************************************/
 /* ID Selectors */
