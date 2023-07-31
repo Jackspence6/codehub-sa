@@ -22,6 +22,11 @@ nav .brand-logo {
   font-size: 4.5rem;
 }
 
+nav ul li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
 body {
   background-color: #24292e;
 }
@@ -70,32 +75,6 @@ button {
 /******************************************/
 /* Class Selectors */
 /******************************************/
-/* DropDown Icon */
-.dropdown-icon-btn {
-  margin-left: auto;
-  margin-right: 2rem;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* DropDown Content */
-.dropdown-content {
-  margin-left: auto;
-  right: 0;
-  left: auto;
-}
-
-/* DropDown Content a Tags */
-.dropdown-content li a {
-  color: #333333;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -166,6 +145,3 @@ button {
 /******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
-button:hover {
-  background-color: #333333;
-}
