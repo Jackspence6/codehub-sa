@@ -50,6 +50,13 @@ h2 {
   margin-bottom: 0px;
 }
 
+h5 {
+  border-bottom: 1px solid;
+}
+
+h6 {
+}
+
 p {
   font-family: "Roboto Mono", monospace;
   font-size: 0.9rem;
@@ -138,6 +145,50 @@ button {
 
 .button-container a {
   margin-top: 20px;
+}
+
+/* Mentor Card Container */
+.mentor-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* mentor card */
+.mentor-card {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.card-action {
+  display: flex;
+  justify-content: center;
+}
+
+.card .card-action {
+  background: none;
+  padding: 10px;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+/* Mentor Details */
+.card-content {
+  text-align: center;
+}
+
+.card-content span {
+  border-bottom: 2px solid;
+}
+
+.card .card-content {
+  padding-bottom: 0%;
+}
+
+.col.s12 {
+  margin-top: 3rem;
 }
 /******************************************/
 /* ID Selectors */
