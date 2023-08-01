@@ -173,6 +173,7 @@ button {
 
 .card {
   border-radius: 1rem;
+  background-color: black;
 }
 
 /* Mentor Details */
@@ -220,5 +221,10 @@ nav ul a:hover {
 
 /* Learn More buttons when hovered on */
 .button-container a button:hover {
+  color: red;
+}
+
+button:hover {
+  background-color: black;
   color: red;
 }
