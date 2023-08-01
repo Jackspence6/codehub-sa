@@ -188,7 +188,18 @@ button {
 }
 
 .col.s12 {
-  margin-top: 3rem;
+  margin-top: 10rem;
+}
+
+/* Mentor Self Image */
+.card .card-image img {
+  border-radius: 50%;
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 100px;
 }
 /******************************************/
 /* ID Selectors */
