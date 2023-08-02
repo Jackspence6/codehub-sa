@@ -206,7 +206,11 @@ button {
 /******************************************/
 /* ID Selectors */
 /******************************************/
-
+#mentorship-body {
+  background-image: url(/assets/images/mentorship-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /******************************************/
 /* Media queries */
 /******************************************/
