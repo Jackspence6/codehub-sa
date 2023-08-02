@@ -203,6 +203,14 @@ button {
   height: 100px;
   width: 100px;
 }
+
+/* Add Mentor Button */
+.centered-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
