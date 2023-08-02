@@ -84,6 +84,15 @@ button {
   background-color: #24292e;
   transition: background-color 0.3s;
 }
+
+/* User Question Form */
+form.col.col.s12 {
+  height: auto;
+  width: 70rem;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 8rem;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
@@ -211,6 +220,23 @@ button {
   align-items: center;
   margin: 2rem;
 }
+
+.row {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field {
+  margin-bottom: 0px;
+  color: white;
+}
+
+/* Dynamically generated questions container */
+.card.blue-grey.lighten-5 {
+  margin: 3rem;
+  padding: 2rem;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -218,6 +244,17 @@ button {
   background-image: url(/assets/images/mentorship-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#learn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#textarea1.materialize-textarea {
+  padding: 0%;
 }
 /******************************************/
 /* Media queries */
