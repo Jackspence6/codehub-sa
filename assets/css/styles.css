@@ -277,6 +277,15 @@ form.col.col.s12 {
   width: 25rem;
   margin: 2px;
 }
+
+/* Coding Challenge Titles */
+.challenge-title {
+  font-family: "Courier New", Courier, monospace;
+  color: red;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
