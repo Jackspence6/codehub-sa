@@ -247,13 +247,16 @@ form.col.col.s12 {
 }
 
 .card-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   height: 25rem;
 }
 
 /* Resource Library Image  */
 .library-image {
-  height: 25%;
-  width: 55%;
+  height: 15rem;
+  width: 25rem;
   margin: 2px;
 }
 
@@ -270,8 +273,8 @@ form.col.col.s12 {
 
 /* Coding Challenges image */
 .challenge-image {
-  height: 25%;
-  width: 45%;
+  height: 15rem;
+  width: 25rem;
   margin: 2px;
 }
 /******************************************/
