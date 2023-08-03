@@ -54,7 +54,9 @@ h5 {
   border-bottom: 1px solid;
 }
 
-h6 {
+h8 {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 p {
@@ -259,6 +261,19 @@ form.col.col.s12 {
 .card-title {
   color: white;
 }
+
+/* Coding Challenge cards */
+.challenge-card {
+  width: 35%;
+  margin: 3rem;
+}
+
+/* Coding Challenges image */
+.challenge-image {
+  height: 25%;
+  width: 45%;
+  margin: 2px;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -295,6 +310,28 @@ form.col.col.s12 {
 
 /* Resource Library contents container */
 #library-contents-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Coding Challenges Container */
+#challenges-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Coding Challenges search bar */
+#challenge-search {
+  width: 90%;
+  margin: 5rem;
+  border-radius: 2rem;
+}
+
+/* Coding Challenges contents container */
+#coding-contents-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
