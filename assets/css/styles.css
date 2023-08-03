@@ -243,6 +243,21 @@ form.col.col.s12 {
   width: 35%;
   margin: 3rem;
 }
+
+.card-content {
+  height: 25rem;
+}
+
+/* Resource Library Image  */
+.library-image {
+  height: 25%;
+  width: 70%;
+}
+
+/* Resource Library Card Title */
+.card-title {
+  color: white;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -272,8 +287,8 @@ form.col.col.s12 {
 
 /* Search bar for resource Library */
 #library-search {
-  width: 80%;
-  margin: 2rem;
+  width: 90%;
+  margin: 5rem;
   border-radius: 2rem;
 }
 
