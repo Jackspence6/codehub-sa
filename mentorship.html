@@ -36,9 +36,9 @@
               <img src="./assets/images/placeholder.png" />
             </div>
             <div class="card-content white-text">
-              <span class="card-title">Mentor Name</span>
-              <span><h5>Language</h5></span>
-              <span><h6>Country</h6></span>
+              <span class="card-title mentor-name">Mentor Name</span>
+              <span class="mentor-language">Language</span>
+              <span class="mentor-country">Country</span>
             </div>
             <div class="card-action">
               <a href="#"><button>Contact Mentor</button></a>
@@ -85,9 +85,20 @@
     </div>
     <!-- Add a mentor Button -->
     <div class="centered-btn">
-      <a class="btn-floating btn-large waves-effect waves-light red"
-        ><i class="material-icons">add</i></a
+      <a
+        data-target="modal1"
+        class="btn-floating btn-large waves-effect waves-light red modal-trigger"
       >
+        <i class="material-icons">add</i>
+      </a>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Title</h4>
+        <p>Modal Content</p>
+      </div>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
