@@ -237,6 +237,12 @@ form.col.col.s12 {
   margin: 3rem;
   padding: 2rem;
 }
+
+/* Library cards */
+.library-card {
+  width: 35%;
+  margin: 3rem;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -261,6 +267,7 @@ form.col.col.s12 {
 #library-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 /* Search bar for resource Library */
@@ -268,6 +275,14 @@ form.col.col.s12 {
   width: 80%;
   margin: 2rem;
   border-radius: 2rem;
+}
+
+/* Resource Library contents container */
+#library-contents-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 /******************************************/
 /* Media queries */
