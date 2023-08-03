@@ -251,7 +251,8 @@ form.col.col.s12 {
 /* Resource Library Image  */
 .library-image {
   height: 25%;
-  width: 70%;
+  width: 55%;
+  margin: 2px;
 }
 
 /* Resource Library Card Title */
