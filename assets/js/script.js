@@ -3,20 +3,8 @@
 /******************************************/
 // Mentorship Program Variables
 var mentorBodyEl = document.getElementById("mentorship-body");
-var mentorCardContainerEl = document.getElementsByClassName(
-  "mentor-card-container"
-);
 var mentorFormEl = document.getElementById("mentor-form");
-var mentorBtnEl = document.getElementById("mentor-btn");
-var submitMentorBtnEl = document.getElementById("submit-mentor-btn");
-
-var mentorNameEl = document.getElementsByClassName("mentor-name");
-var mentorLanguageEl = document.getElementsByClassName("mentor-language");
-var mentorCountryEl = document.getElementsByClassName("mentor-country");
-
-var mentorNameInputEl = document.getElementById("name");
-var mentorLanguageInputEl = document.getElementById("language");
-var mentorCountryInputEl = document.getElementById("country");
+var submitMentorBtnEl = document.getElementById("mentor-btn");
 /******************************************/
 /* Global variables and constants */
 /******************************************/
@@ -25,7 +13,15 @@ var mentorCountryInputEl = document.getElementById("country");
 /******************************************/
 /* Function and class declarations */
 /******************************************/
-function becomeMentor() {
+function becomeMentor(event) {
+  event.preventDefault();
+
+  var mentorNameInputEl = document.getElementById("name").value;
+  var mentorLanguageInputEl = document.getElementById("language").value;
+  var mentorCountryInputEl = document.getElementById("country").value;
+  // Check if the function is called
+  console.log("becomeMentor() called");
+
   // Create the mentor card elements
   var mentorCardEl = document.createElement("div");
   mentorCardEl.classList.add("row", "mentor-card");
@@ -41,15 +37,18 @@ function becomeMentor() {
 
   var mentorNameEl = document.createElement("span");
   mentorNameEl.classList.add("card-title", "mentor-name");
-  mentorNameEl.textContent = mentorNameInputEl.value;
+  mentorNameEl.textContent = mentorNameInputEl;
+  console.log(mentorNameInputEl);
 
   var mentorLanguageEl = document.createElement("span");
   mentorLanguageEl.classList.add("mentor-language");
-  mentorLanguageEl.textContent = mentorLanguageInputEl.value;
+  mentorLanguageEl.textContent = mentorLanguageInputEl;
+  console.log(mentorLanguageInputEl);
 
   var mentorCountryEl = document.createElement("span");
   mentorCountryEl.classList.add("mentor-country");
-  mentorCountryEl.textContent = mentorCountryInputEl.value;
+  mentorCountryEl.textContent = mentorCountryInputEl;
+  console.log(mentorCountryInputEl);
 
   var contactEl = document.createElement("div");
   contactEl.classList.add("card-action");
@@ -71,8 +70,10 @@ function becomeMentor() {
   mentorCardEl.appendChild(cols12El);
 
   // Append the mentor card to the container
+  var mentorCardContainerEl = document.querySelector(".mentor-card-container");
   mentorCardContainerEl.appendChild(mentorCardEl);
 }
+
 /******************************************/
 /* Event listeners */
 /******************************************/
