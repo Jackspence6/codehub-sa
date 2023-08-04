@@ -360,6 +360,18 @@ form.col.col.s12 {
   padding: 2px;
   margin: 2px;
 }
+
+#name {
+  color: white;
+}
+
+#country {
+  color: white;
+}
+
+#language {
+  color: white;
+}
 /******************************************/
 /* Media queries */
 /******************************************/
