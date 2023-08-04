@@ -80,6 +80,11 @@ $(document).ready(function () {
     // Close the modal
     var modalInstance = M.Modal.getInstance(mentorModalEl);
     modalInstance.close();
+
+    // Clear the form after 100 milliseconds
+    setTimeout(function () {
+      mentorFormEl.reset();
+    }, 100);
   }
 
   /******************************************/
