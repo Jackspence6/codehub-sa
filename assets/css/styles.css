@@ -95,6 +95,24 @@ form.col.col.s12 {
   border-radius: 2rem;
   padding: 8rem;
 }
+
+span.card-title.mentor-name {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+span.mentor-language {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+span.mentor-country {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  font-weight: 400;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
@@ -291,6 +309,10 @@ form.col.col.s12 {
   background-color: black;
   border: 2px solid white;
   border-radius: 2rem;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 7rem;
 }
 /******************************************/
 /* ID Selectors */
