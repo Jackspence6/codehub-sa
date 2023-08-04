@@ -21,6 +21,7 @@ $(document).ready(function () {
     var mentorNameInputEl = document.getElementById("name").value;
     var mentorLanguageInputEl = document.getElementById("language").value;
     var mentorCountryInputEl = document.getElementById("country").value;
+    var mentorEmailEl = document.getElementById("email").value;
     // Check if the function is called
     console.log("becomeMentor() called");
 
@@ -56,8 +57,12 @@ $(document).ready(function () {
     contactEl.classList.add("card-action");
 
     var contactBtnEl = document.createElement("a");
+    contactBtnEl.href = "mailto:" + mentorEmailEl;
+    var contactBtn = document.createElement("button");
+    contactBtn.textContent = "Contact Me";
 
     // Appending elements to each other
+    contactBtnEl.appendChild(contactBtn);
     contactEl.appendChild(contactBtnEl);
 
     cardContentEl.appendChild(mentorNameEl);
