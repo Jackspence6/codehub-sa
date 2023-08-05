@@ -314,6 +314,12 @@ span.mentor-country {
 .card .card-content .card-title {
   margin-bottom: 7rem;
 }
+
+/* Question and Response Cards */
+.questionCard {
+  margin: 2rem;
+  padding: 1rem;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -393,6 +399,14 @@ span.mentor-country {
 
 #language {
   color: white;
+}
+
+/* Question and Response Card Container */
+#QuestionsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 /******************************************/
 /* Media queries */
