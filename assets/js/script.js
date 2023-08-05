@@ -8,6 +8,7 @@ $(document).ready(function () {
   var mentorModalEl = document.getElementById("modal1");
   // Learning Spaces Variables
   var questionContainerEl = document.querySelector("#questionsContainer");
+  var submitQuestionBtnEl = document.querySelector("#submit-question");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
@@ -98,7 +99,7 @@ $(document).ready(function () {
   function addQuestion(event) {
     event.preventDefault();
 
-    var questionInputEl = document.getElementById("question-input");
+    var questionInputEl = document.getElementById("question-input").value;
 
     // Creating Question and answer elements
     var questionCardEl = document.createElement("div");
@@ -125,6 +126,7 @@ $(document).ready(function () {
     var questionOutputEl = document.createElement("p");
     questionOutputEl.setAttribute("id", "question-output");
     questionOutputEl.classList.add("white-text");
+    questionOutputEl.textContent = questionInputEl;
 
     var answerRevealEl = document.createElement("div");
     answerRevealEl.classList.add("card-reveal");
@@ -176,6 +178,7 @@ $(document).ready(function () {
   });
 
   submitMentorBtnEl.addEventListener("click", becomeMentor);
+  submitQuestionBtnEl.addEventListener("click", addQuestion);
   /******************************************/
   /* Document manipulation */
   /******************************************/
