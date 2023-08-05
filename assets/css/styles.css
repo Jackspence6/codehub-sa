@@ -317,8 +317,18 @@ span.mentor-country {
 
 /* Question and Response Cards */
 .questionCard {
+  position: relative;
   margin: 2rem;
   padding: 1rem;
+}
+
+.question-card-heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
 }
 /******************************************/
 /* ID Selectors */
