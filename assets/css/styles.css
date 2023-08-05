@@ -113,6 +113,14 @@ span.mentor-country {
   font-size: 2rem;
   font-weight: 400;
 }
+
+div.col.l6.col.s12 {
+  margin-top: 5px;
+}
+
+div.col.l4.offset-l2.col.s12 {
+  margin-top: 5px;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
@@ -329,6 +337,23 @@ span.mentor-country {
   right: 0;
   padding: 5px;
   border-bottom: 1px solid #ddd;
+}
+
+.footer-container {
+  padding: 10px;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  justify-content: space-between;
+  padding: 0%;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
 }
 /******************************************/
 /* ID Selectors */
