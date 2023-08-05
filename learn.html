@@ -59,8 +59,11 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Question:</label>
+              <textarea
+                id="question-input"
+                class="materialize-textarea"
+              ></textarea>
+              <label for="question-input">Question:</label>
             </div>
           </div>
           <div class="row">
@@ -87,6 +90,7 @@
         </form>
       </div>
 
+      <!-- Questions Container -->
       <div id="QuestionsContainer">
         <!-- Questions will be dynamically added here -->
         <div class="card questionCard">
@@ -95,7 +99,7 @@
               >Question:<i class="material-icons right">more_vert</i></span
             >
             <span
-              ><p class="white-text">
+              ><p id="question-output" class="white-text">
                 Here is some more information about this product that is only
                 revealed once clicked on.
               </p></span
@@ -105,7 +109,7 @@
             <span class="card-title grey-text text-darken-4"
               ><i class="material-icons right">close</i>Answer:</span
             >
-            <p>
+            <p id="answer-ouput">
               Here is some more information about this product that is only
               revealed once clicked on.
             </p>

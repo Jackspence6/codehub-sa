@@ -3,10 +3,12 @@ $(document).ready(function () {
   /* External dependencies */
   /******************************************/
   // Mentorship Program Variables
-  var mentorBodyEl = document.getElementById("mentorship-body");
   var mentorFormEl = document.getElementById("mentor-form");
   var submitMentorBtnEl = document.getElementById("mentor-btn");
   var mentorModalEl = document.getElementById("modal1");
+
+  // Learning Spaces Variables
+  var questionOutputEl = document.getElementById("question-output");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
@@ -15,6 +17,7 @@ $(document).ready(function () {
   /******************************************/
   /* Function and class declarations */
   /******************************************/
+  // function to add user details from form to mentor card
   function becomeMentor(event) {
     event.preventDefault();
 
@@ -22,10 +25,10 @@ $(document).ready(function () {
     var mentorLanguageInputEl = document.getElementById("language").value;
     var mentorCountryInputEl = document.getElementById("country").value;
     var mentorEmailEl = document.getElementById("email").value;
-    // Check if the function is called
+    // Checking if function is called
     console.log("becomeMentor() called");
 
-    // Create the mentor card elements
+    // Creating mentor card elements
     var mentorCardEl = document.createElement("div");
     mentorCardEl.classList.add("row", "mentor-card");
 
@@ -76,22 +79,76 @@ $(document).ready(function () {
 
     mentorCardEl.appendChild(cols12El);
 
-    // Append the mentor card to the container
+    // Appending the mentor card to the container
     var mentorCardContainerEl = document.querySelector(
       ".mentor-card-container"
     );
     mentorCardContainerEl.appendChild(mentorCardEl);
 
-    // Close the modal
+    // Closing the modal
     var modalInstance = M.Modal.getInstance(mentorModalEl);
     modalInstance.close();
 
-    // Clear the form after 100 milliseconds
+    // Clearing the form after 100 milliseconds
     setTimeout(function () {
       mentorFormEl.reset();
     }, 100);
   }
 
+  // function to add user question from form to card
+  function addQuestion(event) {
+    event.preventDefault();
+
+    var questionInputEl = document.getElementById("question-input");
+
+    // Creating Question and answer elements
+    var questionCardEl = document.createElement("div");
+    questionCardEl.classList.add("card", "questionCard");
+
+    var questionCardContentEl = document.createElement("div");
+    questionCardContentEl.classList.add("card-content");
+
+    var questionCardHeadingEl = document.createElement("span");
+    questionCardHeadingEl.classList.add(
+      "question-card-heading",
+      "card-title",
+      "activator",
+      "white-text"
+    );
+    questionCardHeadingEl.textContent = "Question:";
+
+    var questionCardIconEl = document.createElement("i");
+    questionCardIconEl.classList.add("material-icons", "right");
+    questionCardIconEl.textContent = "more_vert";
+
+    var questionOutputContainerEl = document.createElement("span");
+
+    var questionOutputEl = document.createElement("p");
+    questionOutputEl.setAttribute("id", "question-output");
+    questionOutputEl.classList.add("white-text");
+
+    var answerRevealEl = document.createElement("div");
+    answerRevealEl.classList.add("card-reveal");
+
+    var answerTitleEl = document.createElement("span");
+    answerTitleEl.classList.add("card-title", "grey-text", "text-darken-4");
+    answerTitleEl.textContent = "Answer:";
+
+    var answerIconEl = document.createElement("i");
+    answerIconEl.classList.add("material-icons", "right");
+    answerIconEl.textContent = "close";
+
+    var answerOutputEl = document.createElement("p");
+    answerOutputEl.setAttribute("id", "answer-output");
+
+    var answerQuestionBtnContainerEl = document.createElement("div");
+    answerQuestionBtnContainerEl.classList.add("card-action");
+
+    var answerQuestionBtnEl = document.createElement("a");
+    answerQuestionBtnEl.textContent = "Answer Question";
+
+    // Appending elements to each other
+  }
   /******************************************/
   /* Event listeners */
   /******************************************/

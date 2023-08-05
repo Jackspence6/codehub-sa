@@ -312,7 +312,7 @@ span.mentor-country {
 }
 
 .card .card-content .card-title {
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
 }
 
 /* Question and Response Cards */
@@ -346,7 +346,7 @@ span.mentor-country {
   flex-direction: column;
 }
 
-#textarea1.materialize-textarea {
+#question-input.materialize-textarea {
   padding: 0%;
 }
 
