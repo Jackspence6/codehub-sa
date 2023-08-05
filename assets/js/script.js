@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   /* External dependencies */
   /******************************************/
@@ -7,7 +7,7 @@ $(document).ready(function () {
   var submitMentorBtnEl = document.getElementById("mentor-btn");
   var mentorModalEl = document.getElementById("modal1");
   // Learning Spaces Variables
-  var questionContainerEl = document.querySelector("#questionsContainer");
+  var questionContainerEl = document.querySelector("#QuestionsContainer");
   var submitQuestionBtnEl = document.querySelector("#submit-question");
   /******************************************/
   /* Global variables and constants */
@@ -149,7 +149,6 @@ $(document).ready(function () {
     answerQuestionBtnEl.textContent = "Answer Question";
 
     // Appending elements to each other
-    questionContainerEl.appendChild(questionCardEl);
 
     questionCardEl.appendChild(questionCardContentEl);
     questionCardEl.appendChild(answerRevealEl);
@@ -168,6 +167,8 @@ $(document).ready(function () {
     answerTitleEl.appendChild(answerIconEl);
 
     answerQuestionBtnContainerEl.appendChild(answerQuestionBtnEl);
+
+    questionContainerEl.appendChild(questionCardEl);
   }
   /******************************************/
   /* Event listeners */
@@ -176,8 +177,9 @@ $(document).ready(function () {
   $(document).ready(function () {
     $(".modal").modal();
   });
-
+  // Event listener to add a new mentor
   submitMentorBtnEl.addEventListener("click", becomeMentor);
+  // Event listener to add a new Question
   submitQuestionBtnEl.addEventListener("click", addQuestion);
   /******************************************/
   /* Document manipulation */
