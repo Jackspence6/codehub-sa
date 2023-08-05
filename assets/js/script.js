@@ -6,9 +6,8 @@ $(document).ready(function () {
   var mentorFormEl = document.getElementById("mentor-form");
   var submitMentorBtnEl = document.getElementById("mentor-btn");
   var mentorModalEl = document.getElementById("modal1");
-
   // Learning Spaces Variables
-  var questionOutputEl = document.getElementById("question-output");
+  var questionContainerEl = document.querySelector("#questionsContainer");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
@@ -148,6 +147,25 @@ $(document).ready(function () {
     answerQuestionBtnEl.textContent = "Answer Question";
 
     // Appending elements to each other
+    questionContainerEl.appendChild(questionCardEl);
+
+    questionCardEl.appendChild(questionCardContentEl);
+    questionCardEl.appendChild(answerRevealEl);
+    questionCardEl.appendChild(answerQuestionBtnContainerEl);
+
+    questionCardContentEl.appendChild(questionCardHeadingEl);
+    questionCardContentEl.appendChild(questionOutputContainerEl);
+
+    questionCardHeadingEl.appendChild(questionCardIconEl);
+
+    questionOutputContainerEl.appendChild(questionOutputEl);
+
+    answerRevealEl.appendChild(answerTitleEl);
+    answerRevealEl.appendChild(answerOutputEl);
+
+    answerTitleEl.appendChild(answerIconEl);
+
+    answerQuestionBtnContainerEl.appendChild(answerQuestionBtnEl);
   }
   /******************************************/
   /* Event listeners */
