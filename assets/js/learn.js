@@ -85,6 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
     answerQuestionBtnContainerEl.appendChild(answerQuestionBtnEl);
 
     questionContainerEl.appendChild(questionCardEl);
+
+    // Resetting the form inputs after submission
+    document.getElementById("first_name").value = "";
+    document.getElementById("last_name").value = "";
+    document.getElementById("question_language").value = "";
+    document.getElementById("question-input").value = "";
+    document.getElementById("email").value = "";
   }
   /******************************************/
   /* Event listeners */
