@@ -190,3 +190,17 @@ div.col.l4.offset-l2.col.s12 {
 /******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
+/* Nav Items when hovered on */
+nav ul a:hover {
+  color: red;
+}
+
+/* Learn More buttons when hovered on */
+.button-container a button:hover {
+  color: red;
+}
+
+button:hover {
+  background-color: black;
+  color: red;
+}
