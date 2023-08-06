@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   var questionContainerEl = document.querySelector("#QuestionsContainer");
   var submitQuestionBtnEl = document.querySelector("#submit-question");
+
+  var submitAnswerBtn = document.getElementById("submit-answer-btn");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
-
+  var answerOutputEl;
   /******************************************/
   /* Function and class declarations */
   /******************************************/
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     answerIconEl.classList.add("material-icons", "right");
     answerIconEl.textContent = "close";
 
-    var answerOutputEl = document.createElement("p");
+    answerOutputEl = document.createElement("p");
     answerOutputEl.setAttribute("id", "answer-output");
     answerOutputEl.classList.add("black-text");
 
@@ -96,12 +98,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("question-input").value = "";
     document.getElementById("email").value = "";
   }
+
+  // Function to add answer to back of question card.
+  function addAnswer(event) {
+    event.preventDefault();
+    var answerInputEl = document.getElementById("answer-text");
+    answerOutputEl.textContent = answerInputEl.value;
+    console.log("Adding Answer");
+  }
   /******************************************/
   /* Event listeners */
   /******************************************/
   // Event listener to add a new Question
   submitQuestionBtnEl.addEventListener("click", addQuestion);
 
+  // Event Listener to add answer to back of question card.
+  submitAnswerBtn.addEventListener("click", addAnswer);
+
+  // Event to open modal on click
   $("#modal2").modal();
   /******************************************/
   /* Document manipulation */
