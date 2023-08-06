@@ -57,15 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var answerOutputEl = document.createElement("p");
     answerOutputEl.setAttribute("id", "answer-output");
+    answerOutputEl.classList.add("black-text");
 
     var answerQuestionBtnContainerEl = document.createElement("div");
     answerQuestionBtnContainerEl.classList.add("card-action");
 
+    // Modal Trigger
     var answerQuestionBtnEl = document.createElement("a");
+    answerQuestionBtnEl.classList.add("modal-trigger");
+    answerQuestionBtnEl.href = "#modal2";
     answerQuestionBtnEl.textContent = "Answer Question";
 
     // Appending elements to each other
-
     questionCardEl.appendChild(questionCardContentEl);
     questionCardEl.appendChild(answerRevealEl);
     questionCardEl.appendChild(answerQuestionBtnContainerEl);
@@ -98,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   // Event listener to add a new Question
   submitQuestionBtnEl.addEventListener("click", addQuestion);
+
+  $("#modal2").modal();
   /******************************************/
   /* Document manipulation */
   /******************************************/

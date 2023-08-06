@@ -25,6 +25,16 @@ body {
   background-color: #24292e;
 }
 
+h4 {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 700;
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 3px;
+}
+
 h5 {
   border-bottom: 1px solid;
 }
@@ -203,6 +213,24 @@ div.card-action {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+#answer-text {
+  margin-top: 1rem;
+  margin-bottom: 0%;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#modalContent {
+  padding: 0px;
+}
+
+#submit-answer-btn {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  background-color: #b6b2bf;
+  border-radius: 7px;
+}
 /******************************************/
 /* Media queries */
 /******************************************/
@@ -210,3 +238,8 @@ div.card-action {
 /******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
+#submit-answer-btn:hover {
+  color: red;
+  font-weight: 700;
+  border-radius: 7px;
+}
