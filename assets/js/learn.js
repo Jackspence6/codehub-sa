@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var answerInputEl = document.getElementById("answer-text");
     answerOutputEl.textContent = answerInputEl.value;
     console.log("Adding Answer");
+    // Clearing Answer input field after submission
+    answerInputEl.value = "";
   }
   /******************************************/
   /* Event listeners */
