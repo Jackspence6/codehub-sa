@@ -68,6 +68,11 @@ div.col.l6.col.s12 {
 div.col.l4.offset-l2.col.s12 {
   margin-top: 5px;
 }
+
+div.card-action {
+  position: relative;
+  bottom: 4rem;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
@@ -148,6 +153,8 @@ div.col.l4.offset-l2.col.s12 {
   position: relative;
   margin: 2rem;
   padding: 1rem;
+  width: 35rem;
+  height: 25rem;
 }
 
 .question-card-heading {
