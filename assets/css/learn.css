@@ -1,7 +1,6 @@
 /******************************************/
 /* Variable Selectors */
 /******************************************/
-
 /******************************************/
 /* Universal Selector */
 /******************************************/
@@ -33,6 +32,9 @@ h5 {
 p {
   font-family: "Roboto Mono", monospace;
   font-size: 0.9rem;
+}
+
+button {
   color: #b6b2bf;
 }
 
@@ -76,6 +78,34 @@ div.col.l4.offset-l2.col.s12 {
   padding: 0 10px;
 }
 
+.card-action {
+  display: flex;
+  justify-content: center;
+}
+
+.card .card-action {
+  background: none;
+  padding: 10px;
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: black;
+}
+
+/* Mentor Details */
+.card-content {
+  text-align: center;
+}
+
+.card-content span {
+  border-bottom: 2px solid;
+}
+
+.card .card-content {
+  padding-bottom: 0%;
+}
+
 .col.s12 {
   margin-top: 10rem;
 }
@@ -91,6 +121,44 @@ div.col.l4.offset-l2.col.s12 {
   color: white;
 }
 
+/* Dynamically generated questions container */
+.card.blue-grey.lighten-5 {
+  margin: 3rem;
+  padding: 2rem;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 25rem;
+}
+
+/* Resource Library Card Title */
+.card-title {
+  color: white;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 1rem;
+}
+
+/* Question and Response Cards */
+.questionCard {
+  position: relative;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.question-card-heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
 .footer-container {
   padding: 10px;
 }
@@ -103,7 +171,6 @@ div.col.l4.offset-l2.col.s12 {
   padding: 0%;
   margin-top: 1rem;
 }
-
 .footer-copyright {
   display: flex;
   justify-content: center;
