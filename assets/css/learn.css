@@ -1,0 +1,138 @@
+/******************************************/
+/* Variable Selectors */
+/******************************************/
+
+/******************************************/
+/* Universal Selector */
+/******************************************/
+/* 1rem is 13px */
+html {
+  font-size: 13px;
+}
+/******************************************/
+/* Element Selectors */
+/******************************************/
+nav {
+  background-color: black;
+  height: 5rem;
+}
+
+/* Logo Icon */
+nav .brand-logo {
+  font-size: 4.5rem;
+}
+
+body {
+  background-color: #24292e;
+}
+
+h5 {
+  border-bottom: 1px solid;
+}
+
+p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  color: #b6b2bf;
+}
+
+/* Removing default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  color: #b6b2bf;
+  background-color: #24292e;
+  transition: background-color 0.3s;
+}
+
+/* User Question Form */
+form.col.col.s12 {
+  height: auto;
+  width: 70rem;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 8rem;
+}
+
+div.col.l6.col.s12 {
+  margin-top: 5px;
+}
+
+div.col.l4.offset-l2.col.s12 {
+  margin-top: 5px;
+}
+/******************************************/
+/* Class Selectors */
+/******************************************/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.col.s12 {
+  margin-top: 10rem;
+}
+
+.row {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field {
+  margin-bottom: 0px;
+  color: white;
+}
+
+.footer-container {
+  padding: 10px;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  justify-content: space-between;
+  padding: 0%;
+  margin-top: 1rem;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+}
+/******************************************/
+/* ID Selectors */
+/******************************************/
+#learn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#question-input.materialize-textarea {
+  padding: 0%;
+}
+
+/* Question and Response Card Container */
+#QuestionsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/******************************************/
+/* Media queries */
+/******************************************/
+
+/******************************************/
+/* Pseudo Classes and Elements */
+/******************************************/
