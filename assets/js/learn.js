@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   var questionContainerEl = document.querySelector("#QuestionsContainer");
   var submitQuestionBtnEl = document.querySelector("#submit-question");
-
   var submitAnswerBtn = document.getElementById("submit-answer-btn");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
   var answerOutputEl;
+  // Storing the selected question card as a variable
+  var selectedQuestionCardEl;
   /******************************************/
   /* Function and class declarations */
   /******************************************/
@@ -99,20 +100,37 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("email").value = "";
   }
 
-  // Function to add answer to back of question card.
+  // Function to handle which question is being answered
+  function handleAnswerClick(event) {
+    event.preventDefault();
+    // determining which question is being answered
+    selectedQuestionCardEl = event.target.closest(".questionCard");
+    console.log(selectedQuestionCardEl);
+  }
+
+  // Function to add answer to back of selected question card.
   function addAnswer(event) {
     event.preventDefault();
-    var answerInputEl = document.getElementById("answer-text");
-    answerOutputEl.textContent = answerInputEl.value;
-    console.log("Adding Answer");
-    // Clearing Answer input field after submission
-    answerInputEl.value = "";
+    if (selectedQuestionCardEl) {
+      var answerInputEl = document.getElementById("answer-text");
+      var answerOutputEl =
+        selectedQuestionCardEl.querySelector("#answer-output");
+      answerOutputEl.textContent = answerInputEl.value;
+      console.log("Adding Answer");
+      // Clearing the Answer input field after submission
+      answerInputEl.value = "";
+      // Closing the answer modal after submission
+      $("#modal2").modal("close");
+    }
   }
   /******************************************/
   /* Event listeners */
   /******************************************/
   // Event listener to add a new Question
   submitQuestionBtnEl.addEventListener("click", addQuestion);
+
+  // Event Listener to assign the target question card to the selectedQuestionCardEl variable
+  questionContainerEl.addEventListener("click", handleAnswerClick);
 
   // Event Listener to add answer to back of question card.
   submitAnswerBtn.addEventListener("click", addAnswer);
