@@ -185,3 +185,33 @@ div.col.l4.offset-l2.col.s12 {
 /******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
+/* Tooltip explaining more info is on back of card */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 1;
+  bottom: 113%;
+  left: 98%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: wrap;
+  border: 7px solid black;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
