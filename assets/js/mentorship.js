@@ -97,6 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".modal").modal();
   });
 
+  // Event listener to activate tooltip
+  $(".tooltipped").tooltip({ delay: 50 });
+
   // Event listener to add a new mentor
   submitMentorBtnEl.addEventListener("click", becomeMentor);
   /******************************************/

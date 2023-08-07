@@ -219,6 +219,16 @@ div.col.l4.offset-l2.col.s12 {
   justify-content: center;
   align-self: center;
 }
+
+/* Tooltip above the add a new mentor btn  */
+.material-tooltip {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 10px;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
