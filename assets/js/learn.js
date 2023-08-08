@@ -137,6 +137,11 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       // Assigning question answer
       questionsAndAnswersArray[questionIndex].answer = answerInputEl;
+      // Saving objects to local storage with the key, "questionCards".
+      localStorage.setItem(
+        "questionCards",
+        JSON.stringify(questionsAndAnswersArray)
+      );
       answerOutputEl = selectedQuestionCardEl.querySelector("#answer-output");
       answerOutputEl.textContent = answerInputEl;
       console.log("Adding Answer");
@@ -149,6 +154,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // logging questionsAndAnswersArray to console
     console.log(questionsAndAnswersArray);
   }
+
+  // Function to generate cards from local storage data
+  function generateCardsFromSavedData() {
+    // Getting the saved card data from local storage
+    var savedDataString = localStorage.getItem("questionCards");
+    // checking to see if there is card data saved to local storage
+    if (savedDataString) {
+      // If there is, assigning the data to the variable savedData and parsing it back from a string
+      var savedData = JSON.parse(savedDataString);
+    }
+    // Logging the saved data to the console
+    console.log(savedData);
+  }
+  // Calling the generateCardsFromSavedData function on page load
+  generateCardsFromSavedData();
   /******************************************/
   /* Event listeners */
   /******************************************/
