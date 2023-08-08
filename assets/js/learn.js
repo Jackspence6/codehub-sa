@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Adding Answer");
       // Clearing the Answer input field after submission
       answerInputEl.value = "";
+      document.getElementById("answer-text").value = "";
       // Closing the answer modal after submission
       $("#modal2").modal("close");
     }
