@@ -137,8 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       // Assigning question answer
       questionsAndAnswersArray[questionIndex].answer = answerInputEl;
-      // Pushing question card data array of objects to questionsAndAnswersArray variable
-      questionsAndAnswersArray.push(questionCardData);
       answerOutputEl = selectedQuestionCardEl.querySelector("#answer-output");
       answerOutputEl.textContent = answerInputEl;
       console.log("Adding Answer");
