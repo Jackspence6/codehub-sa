@@ -17,14 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
   var answerOutputEl;
   // Initializing an empty array to save questions, answers and indexes.
   var questionsAndAnswersArray = [];
+  //  Initializing an empty object to save questions, answers and indexes.
+  var questionCardData = {
+    question: questionInputEl,
+    answer: answerInputEl,
+    index: questionIndex,
+  };
   /******************************************/
   /* Function and class declarations */
   /******************************************/
   // function to add user question from form to card
   function addQuestion(event) {
     event.preventDefault();
-
     questionInputEl = document.getElementById("question-input").value;
+    // pushing question & index to object
+    questionsAndAnswersArray.push({
+      question: questionInputEl,
+      // No answer yet so assigning null to answer value
+      answer: null,
+      index: questionContainerEl.children.length,
+    });
 
     // Creating Question and answer elements
     var questionCardEl = document.createElement("div");
@@ -123,6 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
       questionIndex = Array.from(questionContainerEl.children).indexOf(
         selectedQuestionCardEl
       );
+      // Assigning question answer
+      questionsAndAnswersArray[questionIndex].answer = answerInputEl;
+      // Pushing question card data array of objects to questionsAndAnswersArray variable
+      questionsAndAnswersArray.push(questionCardData);
       answerOutputEl = selectedQuestionCardEl.querySelector("#answer-output");
       answerOutputEl.textContent = answerInputEl;
       console.log("Adding Answer");
@@ -132,18 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Closing the answer modal after submission
       $("#modal2").modal("close");
     }
-  }
-
-  // Function to save questions, answers and indexes to an array of objects
-  function saveQuestionsAndAnswers() {
-    var questionCardData = {
-      question: questionInputEl,
-      answer: answerInputEl,
-      index: questionIndex,
-    };
-    // Pushing the questionCardData to the questionsAndAnswersArray
-    questionsAndAnswersArray.push(questionCardData);
-    // Logging questionsAndAnswersArray to the console
+    // logging questionsAndAnswersArray to console
     console.log(questionsAndAnswersArray);
   }
   /******************************************/
@@ -157,8 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event Listener to add answer to back of question card.
   submitAnswerBtn.addEventListener("click", addAnswer);
-  // Event Listener to save questions,answers and indexes to an array of objects.
-  submitAnswerBtn.addEventListener("click", saveQuestionsAndAnswers);
 
   // Event to open modal on click
   $("#modal2").modal();
