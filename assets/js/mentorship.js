@@ -101,6 +101,22 @@ document.addEventListener("DOMContentLoaded", function () {
       mentorFormEl.reset();
     }, 100);
   }
+
+  // function to generate mentor card profiles from local storage data
+  function generateMentorFromSavedData() {
+    // Getting saved mentor data from local storage as a string
+    var mentorDataString = localStorage.getItem("mentorData");
+    // logging the mentorDataString to the console
+    console.log(mentorDataString);
+    // Checking to see if there is any saved mentor data
+    if (mentorDataString) {
+      // Parsing mentor data back into array and assigning it to mentorData
+      var mentorData = JSON.parse(mentorDataString);
+      // logging mentorData to the console
+      console.log(mentorData);
+    }
+  }
+  generateMentorFromSavedData();
   /******************************************/
   /* Event listeners */
   /******************************************/
