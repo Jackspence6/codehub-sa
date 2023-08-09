@@ -116,6 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("question_language").value = "";
     document.getElementById("question-input").value = "";
     document.getElementById("email").value = "";
+
+    // Saving questions & indexes to local storage with the key, "questionCards".
+    localStorage.setItem(
+      "questionCards",
+      JSON.stringify(questionsAndAnswersArray)
+    );
   }
 
   // Function to handle which question is being answered
@@ -137,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       // Assigning question answer
       questionsAndAnswersArray[questionIndex].answer = answerInputEl;
-      // Saving objects to local storage with the key, "questionCards".
+      // Saving answers to local storage with the key, "questionCards".
       localStorage.setItem(
         "questionCards",
         JSON.stringify(questionsAndAnswersArray)
