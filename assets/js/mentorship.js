@@ -112,6 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mentorDataString) {
       // Parsing mentor data back into array and assigning it to mentorData
       var mentorData = JSON.parse(mentorDataString);
+      // Updating mentorDataArray with saved data
+      mentorDataArray = mentorData;
       // logging mentorData to the console
       console.log(mentorData);
     }
