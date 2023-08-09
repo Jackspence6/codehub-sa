@@ -12,29 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   /* Function and class declarations */
   /******************************************/
-  // function to add user details from form to mentor card
-  function becomeMentor(event) {
-    event.preventDefault();
-
-    var mentorNameInputEl = document.getElementById("name").value;
-    var mentorLanguageInputEl = document.getElementById("language").value;
-    var mentorCountryInputEl = document.getElementById("country").value;
-    var mentorEmailEl = document.getElementById("email").value;
-    // Checking if function is called
-    console.log("becomeMentor() called");
-
-    // Creating a new mentor object
-    var newMentor = {
-      name: mentorNameInputEl,
-      language: mentorLanguageInputEl,
-      country: mentorCountryInputEl,
-      email: mentorEmailEl,
-    };
-    // Pushing new mentor data in mentorDataArray
-    mentorDataArray.push(newMentor);
-    // Saving mentor data array to local storage
-    localStorage.setItem("mentorData", JSON.stringify(mentorDataArray));
-
+  // Function to create and populate mentor card
+  function createAndPopulateMentorCard(mentor) {
     // Creating mentor card elements
     var mentorCardEl = document.createElement("div");
     mentorCardEl.classList.add("row", "mentor-card");
@@ -50,24 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var mentorNameEl = document.createElement("span");
     mentorNameEl.classList.add("card-title", "mentor-name");
-    mentorNameEl.textContent = mentorNameInputEl;
-    console.log(mentorNameInputEl);
+    mentorNameEl.textContent = mentor.name;
 
     var mentorLanguageEl = document.createElement("span");
     mentorLanguageEl.classList.add("mentor-language");
-    mentorLanguageEl.textContent = mentorLanguageInputEl;
-    console.log(mentorLanguageInputEl);
+    mentorLanguageEl.textContent = mentor.language;
 
     var mentorCountryEl = document.createElement("span");
     mentorCountryEl.classList.add("mentor-country");
-    mentorCountryEl.textContent = mentorCountryInputEl;
-    console.log(mentorCountryInputEl);
+    mentorCountryEl.textContent = mentor.country;
 
     var contactEl = document.createElement("div");
     contactEl.classList.add("card-action");
 
     var contactBtnEl = document.createElement("a");
-    contactBtnEl.href = "mailto:" + mentorEmailEl;
+    contactBtnEl.href = "mailto:" + mentor.email;
     var contactBtn = document.createElement("button");
     contactBtn.textContent = "Contact Me";
 
@@ -91,31 +67,56 @@ document.addEventListener("DOMContentLoaded", function () {
       ".mentor-card-container"
     );
     mentorCardContainerEl.appendChild(mentorCardEl);
+  }
+
+  // Function to add user details from form to mentor card
+  function becomeMentor(event) {
+    event.preventDefault();
+
+    var mentorNameInputEl = document.getElementById("name").value;
+    var mentorLanguageInputEl = document.getElementById("language").value;
+    var mentorCountryInputEl = document.getElementById("country").value;
+    var mentorEmailEl = document.getElementById("email").value;
+
+    // Creating a new mentor object
+    var newMentor = {
+      name: mentorNameInputEl,
+      language: mentorLanguageInputEl,
+      country: mentorCountryInputEl,
+      email: mentorEmailEl,
+    };
+    // Pushing new mentor data in mentorDataArray
+    mentorDataArray.push(newMentor);
+    // Saving mentor data array to local storage
+    localStorage.setItem("mentorData", JSON.stringify(mentorDataArray));
+
+    // Calling the createAndPopulateMentorCard function
+    createAndPopulateMentorCard(newMentor);
 
     // Closing the modal
     var modalInstance = M.Modal.getInstance(mentorModalEl);
     modalInstance.close();
 
-    // Clearing the form after 100 milliseconds
+    // Clearing the form after 100 milliseconds (1 second)
     setTimeout(function () {
       mentorFormEl.reset();
     }, 100);
   }
 
-  // function to generate mentor card profiles from local storage data
+  // Function to generate mentor card profiles from local storage data
   function generateMentorFromSavedData() {
     // Getting saved mentor data from local storage as a string
     var mentorDataString = localStorage.getItem("mentorData");
-    // logging the mentorDataString to the console
-    console.log(mentorDataString);
-    // Checking to see if there is any saved mentor data
     if (mentorDataString) {
       // Parsing mentor data back into array and assigning it to mentorData
       var mentorData = JSON.parse(mentorDataString);
       // Updating mentorDataArray with saved data
       mentorDataArray = mentorData;
-      // logging mentorData to the console
-      console.log(mentorData);
+
+      for (let i = 0; i < mentorData.length; i++) {
+        // Calling the createAndPopulateMentorCard function
+        createAndPopulateMentorCard(mentorData[i]);
+      }
     }
   }
   generateMentorFromSavedData();
