@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   /* Global variables and constants */
   /******************************************/
-
+  var mentorDataArray = [];
   /******************************************/
   /* Function and class declarations */
   /******************************************/
@@ -22,6 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var mentorEmailEl = document.getElementById("email").value;
     // Checking if function is called
     console.log("becomeMentor() called");
+
+    // Creating a new mentor object
+    var newMentor = {
+      name: mentorNameInputEl,
+      language: mentorLanguageInputEl,
+      country: mentorCountryInputEl,
+      email: mentorEmailEl,
+    };
+    // Pushing new mentor data in mentorDataArray
+    mentorDataArray.push(newMentor);
+    // Saving mentor data array to local storage
+    localStorage.setItem("mentorData", JSON.stringify(mentorDataArray));
 
     // Creating mentor card elements
     var mentorCardEl = document.createElement("div");
