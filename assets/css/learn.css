@@ -83,6 +83,14 @@ div.card-action {
   position: relative;
   bottom: 4rem;
 }
+
+span.card-title {
+  font-family: monospace;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 4px solid;
+  margin-bottom: 3px;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
