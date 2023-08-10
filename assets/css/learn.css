@@ -25,6 +25,16 @@ body {
   background-color: #24292e;
 }
 
+h1 {
+  font-family: "Preahvihear", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  color: antiquewhite;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
 h4 {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
@@ -69,6 +79,7 @@ form.col.col.s12 {
   background-color: black;
   border-radius: 2rem;
   padding: 8rem;
+  margin-top: 0px;
 }
 
 div.col.l6.col.s12 {
