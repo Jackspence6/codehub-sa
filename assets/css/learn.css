@@ -241,6 +241,8 @@ ul {
   margin: 15px;
   font-size: 15px;
   padding: 3px;
+  text-decoration: underline;
+  font-weight: bold;
 }
 /******************************************/
 /* ID Selectors */
@@ -308,6 +310,11 @@ ul {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+#stack-ul {
+  position: relative;
+  bottom: 25px;
 }
 /******************************************/
 /* Media queries */
