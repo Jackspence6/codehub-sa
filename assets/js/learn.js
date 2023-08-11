@@ -203,16 +203,91 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log(title);
           var ownerName = items[i].owner.display_name;
           console.log(ownerName);
-          var ownerAcceptRate = items[i].owner.accept_rate;
+          var ownerAcceptRate = items[i].owner.accept_rate || "N/A";
           console.log(ownerAcceptRate);
           var questionScore = items[i].score;
           console.log(questionScore);
           var link = items[i].link;
           console.log(link);
+
+          // Calling the createStackCard function to create a card for this question
+          createStackCard(
+            title,
+            ownerName,
+            ownerAcceptRate,
+            questionScore,
+            link
+          );
         }
       });
   }
-  searchQuestion();
+
+  // Function to create a Stack Overflow card
+  function createStackCard(
+    title,
+    ownerName,
+    ownerAcceptRate,
+    questionScore,
+    link
+  ) {
+    var stackContainer = document.getElementById("stack-container");
+    var rowDiv = document.createElement("div");
+    rowDiv.className = "row";
+
+    var colDiv = document.createElement("div");
+    colDiv.className = "col s12 m6";
+
+    var cardDiv = document.createElement("div");
+    cardDiv.id = "stack-card";
+    cardDiv.className = "card blue-grey darken-1";
+
+    var contentDiv = document.createElement("div");
+    contentDiv.id = "stack-content";
+    contentDiv.className = "card-content white-text";
+
+    var titleSpan = document.createElement("span");
+    titleSpan.id = "stack-title";
+    titleSpan.className = "card-title";
+    titleSpan.textContent = title;
+
+    var ul = document.createElement("ul");
+    ul.id = "stack-ul";
+
+    // Adding question owner name
+    var ownerLi = document.createElement("li");
+    ownerLi.className = "stack-list";
+    ownerLi.innerHTML = `Owner Name: <span>${ownerName}</span>`;
+    ul.appendChild(ownerLi);
+
+    // Adding question owner accept rate
+    var acceptRateLi = document.createElement("li");
+    acceptRateLi.className = "stack-list";
+    acceptRateLi.innerHTML = `Owner Accept Rate: <span>${ownerAcceptRate}</span>`;
+    ul.appendChild(acceptRateLi);
+
+    // Adding question score
+    var scoreLi = document.createElement("li");
+    scoreLi.className = "stack-list";
+    scoreLi.innerHTML = `Question Score: <span>${questionScore}</span>`;
+    ul.appendChild(scoreLi);
+
+    contentDiv.appendChild(titleSpan);
+    contentDiv.appendChild(ul);
+    cardDiv.appendChild(contentDiv);
+
+    var actionDiv = document.createElement("div");
+    actionDiv.id = "stack-card-action";
+    actionDiv.className = "card-action";
+    var aLink = document.createElement("a");
+    aLink.href = link;
+    aLink.textContent = "Read More";
+    actionDiv.appendChild(aLink);
+    cardDiv.appendChild(actionDiv);
+
+    colDiv.appendChild(cardDiv);
+    rowDiv.appendChild(colDiv);
+    stackContainer.appendChild(rowDiv);
+  }
   /******************************************/
   /* Event listeners */
   /******************************************/
@@ -232,6 +307,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   // Calling the generateCardsFromSavedData function on page load to generate cards that were previously created
   generateCardsFromSavedData();
+
+  // calling the searchQuestion function to get stack overflow data
+  searchQuestion();
   /******************************************/
   /* Main logic */
   /******************************************/
