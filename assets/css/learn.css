@@ -116,12 +116,16 @@ input#search {
 
 span#stack-title.card-title {
   position: relative;
-  top: -110px;
+  top: -55px;
 }
 
 div#stack-card-action {
   position: relative;
   top: 0px;
+}
+
+ul {
+  text-align: left;
 }
 /******************************************/
 /* Class Selectors */
@@ -232,6 +236,12 @@ div#stack-card-action {
   display: flex;
   justify-content: center;
 }
+
+.stack-list {
+  margin: 15px;
+  font-size: 15px;
+  padding: 3px;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -290,6 +300,14 @@ div#stack-card-action {
 #stack-content {
   background-color: black;
   border-radius: 5px;
+  width: 30rem;
+}
+
+#stack-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 /******************************************/
 /* Media queries */

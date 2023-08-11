@@ -201,6 +201,12 @@ document.addEventListener("DOMContentLoaded", function () {
           // Assigning question elements to variables
           var title = items[i].title;
           console.log(title);
+          var ownerName = items[i].owner.display_name;
+          console.log(ownerName);
+          var ownerAcceptRate = items[i].owner.accept_rate;
+          console.log(ownerAcceptRate);
+          var questionScore = items[i].score;
+          console.log(questionScore);
           var link = items[i].link;
           console.log(link);
         }
