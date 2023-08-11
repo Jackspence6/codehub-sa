@@ -250,6 +250,13 @@ span.card-title {
   background-color: #b6b2bf;
   border-radius: 7px;
 }
+
+/* Question search bar */
+#stack-search {
+  width: 90%;
+  margin: 5rem;
+  border-radius: 2rem;
+}
 /******************************************/
 /* Media queries */
 /******************************************/
