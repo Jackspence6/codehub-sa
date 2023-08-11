@@ -182,6 +182,21 @@ document.addEventListener("DOMContentLoaded", function () {
     questionContainerEl.appendChild(questionCardEl);
   }
 
+  // Function to search questions on stack overflow
+  function searchQuestion(searchTerm) {
+    var searchTerm = "timeout function";
+    fetch(
+      `https://api.stackexchange.com/2.3/search?order=desc&sort=relevance&intitle=${searchTerm}&site=stackoverflow`
+    )
+      .then(function (response) {
+        return response.json();
+      })
+
+      .then(function (data) {
+        console.log(data);
+      });
+  }
+  searchQuestion();
   /******************************************/
   /* Event listeners */
   /******************************************/
