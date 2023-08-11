@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var questionContainerEl = document.querySelector("#QuestionsContainer");
   var submitQuestionBtnEl = document.querySelector("#submit-question");
   var submitAnswerBtn = document.getElementById("submit-answer-btn");
+  var stackSearchEl = document.getElementById("search");
+  var stackSearchBtnEl = document.getElementById("search-btn");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
@@ -184,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to search questions on stack overflow
   function searchQuestion(searchTerm) {
-    var searchTerm = "timeout function";
+    var searchTerm = stackSearchEl.value;
     fetch(
       `https://api.stackexchange.com/2.3/search?order=desc&sort=votes&intitle=${searchTerm}&site=stackoverflow&pagesize=5`
     )
@@ -300,6 +302,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event Listener to add answer to back of question card.
   submitAnswerBtn.addEventListener("click", addAnswer);
 
+  // Event Listener to search stack overflow.
+  stackSearchBtnEl.addEventListener("click", searchQuestion);
+
   // Event to open modal on click
   $("#modal2").modal();
   /******************************************/
@@ -309,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
   generateCardsFromSavedData();
 
   // calling the searchQuestion function to get stack overflow data
-  searchQuestion();
+  // searchQuestion();
   /******************************************/
   /* Main logic */
   /******************************************/

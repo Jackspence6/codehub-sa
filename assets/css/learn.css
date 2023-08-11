@@ -317,6 +317,19 @@ ul {
   position: relative;
   bottom: 25px;
 }
+
+#search-btn {
+  left: 127rem;
+  position: relative;
+  right: -20px;
+  top: -61px;
+  border-radius: 0px 11px 11px 0px;
+  background-color: black;
+  border: 2px solid white;
+  padding: 0px;
+  padding-right: 4px;
+  padding-left: 4px;
+}
 /******************************************/
 /* Media queries */
 /******************************************/
