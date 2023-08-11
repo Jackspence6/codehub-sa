@@ -194,6 +194,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       .then(function (data) {
         console.log(data);
+        var items = data.items;
+        console.log(items);
+        // looping through items
+        for (let i = 0; i < items.length; i++) {
+          // Assigning question elements to variables
+          var title = items[i].title;
+          console.log(title);
+          var link = items[i].link;
+          console.log(link);
+        }
       });
   }
   searchQuestion();
