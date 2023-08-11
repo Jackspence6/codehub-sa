@@ -116,7 +116,8 @@ input#search {
 
 span#stack-title.card-title {
   position: relative;
-  top: -55px;
+  top: -30px;
+  font-size: medium;
 }
 
 div#stack-card-action {

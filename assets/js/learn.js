@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
     actionDiv.className = "card-action";
     var aLink = document.createElement("a");
     aLink.href = link;
-    aLink.textContent = "Read More";
+    aLink.textContent = "View Question";
     actionDiv.appendChild(aLink);
     cardDiv.appendChild(actionDiv);
 
