@@ -113,6 +113,16 @@ input#search {
   padding-bottom: 7px;
   padding-top: 7px;
 }
+
+span#stack-title.card-title {
+  position: relative;
+  top: -110px;
+}
+
+div#stack-card-action {
+  position: relative;
+  top: 0px;
+}
 /******************************************/
 /* Class Selectors */
 /******************************************/
@@ -267,6 +277,19 @@ input#search {
   width: 90%;
   margin: 5rem;
   border-radius: 2rem;
+}
+
+#stack-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#stack-content {
+  background-color: black;
+  border-radius: 5px;
 }
 /******************************************/
 /* Media queries */
