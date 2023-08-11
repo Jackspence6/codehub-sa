@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function searchQuestion(searchTerm) {
     var searchTerm = "timeout function";
     fetch(
-      `https://api.stackexchange.com/2.3/search?order=desc&sort=relevance&intitle=${searchTerm}&site=stackoverflow`
+      `https://api.stackexchange.com/2.3/search?order=desc&sort=votes&intitle=${searchTerm}&site=stackoverflow`
     )
       .then(function (response) {
         return response.json();
