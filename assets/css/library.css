@@ -26,6 +26,14 @@ body {
   background-color: #24292e;
 }
 
+h1 {
+  font-family: "Barriecito", cursive;
+  text-align: center;
+  color: #f2e9e9;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
 h5 {
   border-bottom: 1px solid;
 }
