@@ -245,6 +245,10 @@ ul {
   text-decoration: underline;
   font-weight: bold;
 }
+
+.input-field {
+  position: relative;
+}
 /******************************************/
 /* ID Selectors */
 /******************************************/
@@ -319,15 +323,20 @@ ul {
 }
 
 #search-btn {
-  left: 96rem;
-  position: relative;
-  top: -61px;
+  position: absolute;
+  top: 3px;
+  right: 12px;
+  margin: 0;
   border-radius: 0px 11px 11px 0px;
   background-color: black;
   border: 2px solid white;
   padding: 0px;
   padding-right: 4px;
   padding-left: 4px;
+}
+
+#search {
+  width: calc(100% - 60px);
 }
 /******************************************/
 /* Media queries */
