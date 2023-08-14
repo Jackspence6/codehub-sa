@@ -26,6 +26,15 @@ body {
   background-color: #24292e;
 }
 
+h1 {
+  font-family: "Handjet", cursive;
+  text-align: center;
+  color: #bba5a5;
+  font-size: 7rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
 h5 {
   border-bottom: 1px solid;
 }
