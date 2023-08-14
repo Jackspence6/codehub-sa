@@ -35,6 +35,13 @@ h1 {
   text-decoration-thickness: 1px;
 }
 
+h2 {
+  font-family: "Tilt Prism", cursive;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
 h5 {
   border-bottom: 1px solid;
 }

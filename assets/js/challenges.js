@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display "No Matches!" below search bar if no match is found
     if (!matchFound) {
       var searchResultEl = document.createElement("h2");
-      searchResultEl.textContent = "No Matches!";
+      searchResultEl.textContent = "No Match Found!";
       //   Appending searchResultEl to challengeSearchContainerEl
       challengeSearchContainerEl.appendChild(searchResultEl);
     }
