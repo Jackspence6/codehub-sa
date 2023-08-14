@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   /* Event listeners */
   /******************************************/
-
+  // Event Listener to activate the searchLibrary function when a user starts typing
+  searchEl.addEventListener("input", searchLibrary);
   /******************************************/
   /* Document manipulation */
   /******************************************/
