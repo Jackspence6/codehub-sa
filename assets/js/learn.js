@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function searchQuestion(searchTerm) {
     var searchTerm = stackSearchEl.value;
     fetch(
-      `https://api.stackexchange.com/2.3/search?order=desc&sort=votes&intitle=${searchTerm}&site=stackoverflow&pagesize=5`
+      `https://api.stackexchange.com/2.3/search?order=desc&sort=votes&intitle=${searchTerm}&site=stackoverflow&pagesize=6`
     )
       .then(function (response) {
         return response.json();
