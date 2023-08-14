@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var topicsEl = document.getElementsByClassName("topics");
   var searchEl = document.getElementById("search");
   var challengeCards = document.querySelectorAll(".challenge-card");
+  var challengeSearchContainerEl = document.getElementById("challenge-search");
   /******************************************/
   /* Global variables and constants */
   /******************************************/
@@ -14,10 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   // Function to search for challenge card based on challenge topics
   function searchChallenges() {
-    // Converting search input to lowercase for comparison
     var searchInput = searchEl.value.toLowerCase();
 
-    // looping through challenge cards
+    // Flag to track if any match is found in the challenges
+    var matchFound = false;
+
+    // Looping through challenge cards
     for (var i = 0; i < challengeCards.length; i++) {
       var challengeCard = challengeCards[i];
       var challengeTopics = challengeCard.querySelectorAll(".topics");
@@ -29,12 +32,22 @@ document.addEventListener("DOMContentLoaded", function () {
           challengeTopics[j].textContent.toLowerCase().includes(searchInput)
         ) {
           shouldDisplay = true;
+          // A match is found
+          matchFound = true;
           break;
         }
       }
 
       // Setting the display property of the card based on the shouldDisplay variable
       challengeCard.style.display = shouldDisplay ? "block" : "none";
+    }
+
+    // Display "No Matches!" below search bar if no match is found
+    if (!matchFound) {
+      var searchResultEl = document.createElement("h2");
+      searchResultEl.textContent = "No Matches!";
+      //   Appending searchResultEl to challengeSearchContainerEl
+      challengeSearchContainerEl.appendChild(searchResultEl);
     }
   }
   /******************************************/
