@@ -117,7 +117,9 @@ input#search {
 span#stack-title.card-title {
   position: relative;
   top: -30px;
-  font-size: medium;
+  font-size: x-large;
+  color: red;
+  font-weight: bold;
 }
 
 div#stack-card-action {
@@ -127,6 +129,11 @@ div#stack-card-action {
 
 ul {
   text-align: left;
+}
+
+div.col.s12.m6 {
+  display: flex;
+  justify-content: center;
 }
 /******************************************/
 /* Class Selectors */
@@ -156,10 +163,6 @@ ul {
 /* Mentor Details */
 .card-content {
   text-align: center;
-}
-
-.card-content span {
-  border-bottom: 2px solid;
 }
 
 .card .card-content {
@@ -242,12 +245,19 @@ ul {
   margin: 15px;
   font-size: 15px;
   padding: 3px;
-  text-decoration: underline;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .input-field {
   position: relative;
+}
+
+a.stack-view-btn {
+  color: blue;
+  border: 5px solid blue;
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: bolder;
 }
 /******************************************/
 /* ID Selectors */
@@ -307,7 +317,7 @@ ul {
 #stack-content {
   background-color: black;
   border-radius: 5px;
-  width: 30rem;
+  width: 100%;
 }
 
 #stack-card {
@@ -315,6 +325,7 @@ ul {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 75%;
 }
 
 #stack-ul {

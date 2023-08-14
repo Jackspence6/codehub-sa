@@ -233,8 +233,6 @@ document.addEventListener("DOMContentLoaded", function () {
     link
   ) {
     var stackContainer = document.getElementById("stack-container");
-    var rowDiv = document.createElement("div");
-    rowDiv.className = "row";
 
     var colDiv = document.createElement("div");
     colDiv.className = "col s12 m6";
@@ -281,14 +279,14 @@ document.addEventListener("DOMContentLoaded", function () {
     actionDiv.id = "stack-card-action";
     actionDiv.className = "card-action";
     var aLink = document.createElement("a");
+    aLink.classList.add("stack-view-btn");
     aLink.href = link;
     aLink.textContent = "View Question";
     actionDiv.appendChild(aLink);
     cardDiv.appendChild(actionDiv);
 
     colDiv.appendChild(cardDiv);
-    rowDiv.appendChild(colDiv);
-    stackContainer.appendChild(rowDiv);
+    stackContainer.appendChild(colDiv);
   }
   /******************************************/
   /* Event listeners */
