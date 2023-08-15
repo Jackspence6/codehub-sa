@@ -278,10 +278,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var actionDiv = document.createElement("div");
     actionDiv.id = "stack-card-action";
     actionDiv.className = "card-action";
+
     var aLink = document.createElement("a");
     aLink.classList.add("stack-view-btn");
     aLink.href = link;
     aLink.textContent = "View Question";
+    // Ensure that stack overflow questions are opened in a new tab
+    aLink.target = "_blank";
     actionDiv.appendChild(aLink);
     cardDiv.appendChild(actionDiv);
 
