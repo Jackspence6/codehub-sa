@@ -31,6 +31,16 @@ body {
   background-color: #24292e;
 }
 
+h1 {
+  font-family: "Preahvihear", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  color: #f7dada;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  margin-bottom: 0px;
+}
+
 p {
   font-family: "Roboto Mono", monospace;
   font-size: 0.9rem;
@@ -234,9 +244,7 @@ div.col.l4.offset-l2.col.s12 {
 /* ID Selectors */
 /******************************************/
 #mentorship-body {
-  background-image: url(/assets/images/mentorship-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #24292e;
 }
 
 #mentor-form {
