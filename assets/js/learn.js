@@ -19,6 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   /* Function and class declarations */
   /******************************************/
+  // Function to decode HTML special characters
+  function decodeHtmlEntities(str) {
+    var textArea = document.createElement("textarea");
+    textArea.innerHTML = str;
+    return textArea.value;
+  }
+
   // Function to add user question from form to card
   function addQuestion(event) {
     event.preventDefault();
@@ -193,24 +200,17 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(function (response) {
         return response.json();
       })
-
       .then(function (data) {
-        console.log(data);
         var items = data.items;
-        console.log(items);
-        // looping through items
+        // Looping through items
         for (let i = 0; i < items.length; i++) {
           // Assigning question elements to variables
-          var title = items[i].title;
-          console.log(title);
+          // Using decodeHtmlEntities function to handle special characters
+          var title = decodeHtmlEntities(items[i].title);
           var ownerName = items[i].owner.display_name;
-          console.log(ownerName);
           var ownerAcceptRate = items[i].owner.accept_rate || "N/A";
-          console.log(ownerAcceptRate);
           var questionScore = items[i].score;
-          console.log(questionScore);
           var link = items[i].link;
-          console.log(link);
 
           // Calling the createStackCard function to create a card for this question
           createStackCard(
@@ -310,9 +310,6 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   // Calling the generateCardsFromSavedData function on page load to generate cards that were previously created
   generateCardsFromSavedData();
-
-  // calling the searchQuestion function to get stack overflow data
-  // searchQuestion();
   /******************************************/
   /* Main logic */
   /******************************************/
