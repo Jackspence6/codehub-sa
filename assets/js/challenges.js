@@ -6,10 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var searchEl = document.getElementById("search");
   var challengeCards = document.querySelectorAll(".challenge-card");
   var challengeSearchContainerEl = document.getElementById("challenge-search");
+
   /******************************************/
   /* Global variables and constants */
   /******************************************/
-
+  // Creating the "No Match Found!" element once and storing it in a variable
+  var searchResultEl = document.createElement("h2");
+  searchResultEl.textContent = "No Match Found!";
+  // Hiding it initially
+  searchResultEl.style.display = "none";
+  // Appending the element to the container
+  challengeSearchContainerEl.appendChild(searchResultEl);
   /******************************************/
   /* Function and class declarations */
   /******************************************/
@@ -42,18 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
       challengeCard.style.display = shouldDisplay ? "block" : "none";
     }
 
-    // Display "No Matches!" below search bar if no match is found
-    if (!matchFound) {
-      var searchResultEl = document.createElement("h2");
-      searchResultEl.textContent = "No Match Found!";
-      //   Appending searchResultEl to challengeSearchContainerEl
-      challengeSearchContainerEl.appendChild(searchResultEl);
-    }
+    // Displaying or hiding "No Match Found!" based on matchFound variable
+    searchResultEl.style.display = matchFound ? "none" : "block";
   }
   /******************************************/
   /* Event listeners */
   /******************************************/
-  //   Event Listener to activate the searchChallenges function when a user starts typing
+  // Event Listener to activate the searchChallenges function when a user starts typing
   searchEl.addEventListener("input", searchChallenges);
   /******************************************/
   /* Document manipulation */
