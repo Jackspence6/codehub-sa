@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
   /******************************************/
   /* Global variables and constants */
   /******************************************/
+  // Creating the "No Match Found!" element once and storing it in a variable
+  var searchResultEl = document.createElement("h2");
+  searchResultEl.textContent = "No Match Found!";
+  // Hiding it initially
+  searchResultEl.style.display = "none";
 
+  // Appending the element to the container
+  libraryContentsContainerEl.appendChild(searchResultEl);
   /******************************************/
   /* Function and class declarations */
   /******************************************/
@@ -38,13 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
       libraryCard.style.display = shouldDisplay ? "block" : "none";
     }
 
-    // Display "No Match Found!" below search bar if no match is found
-    if (!matchFound) {
-      var searchResultEl = document.createElement("h2");
-      searchResultEl.textContent = "No Match Found!";
-      //   Appending searchResultEl to libraryContentsContainerEl
-      libraryContentsContainerEl.appendChild(searchResultEl);
-    }
+    // Displaying or hiding "No Match Found!" based on matchFound variable
+    searchResultEl.style.display = matchFound ? "none" : "block";
   }
   /******************************************/
   /* Event listeners */
