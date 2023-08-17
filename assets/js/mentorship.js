@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var contactBtnEl = document.createElement("a");
     contactBtnEl.href = "mailto:" + mentor.email;
+    // Adding target attribute
+    contactBtnEl.target = "_blank";
     var contactBtn = document.createElement("button");
     contactBtn.textContent = "Contact Me";
 
