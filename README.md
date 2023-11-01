@@ -1,4 +1,5 @@
 # codehub-sa
+[![Project Status: Work in Progress](https://img.shields.io/badge/Project%20Status-In%20Progress-yellow.svg)](https://github.com/Jackspence6/codehub-sa)
 
 ## Description
 CodeHub SA is an innovative web application designed to foster collaboration and learning within the coding community in South Africa. The platform aims to provide aspiring developers with the tools they need to improve their coding skills, connect with experienced mentors, and participate in coding challenges to enhance their expertise.
