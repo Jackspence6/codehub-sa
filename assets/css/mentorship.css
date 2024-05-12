@@ -6,275 +6,294 @@
 /******************************************/
 /* 1rem is 13px */
 html {
-  font-size: 13px;
+	font-size: 13px;
 }
 /******************************************/
 /* Element Selectors */
 /******************************************/
 nav {
-  background-color: black;
-  height: 5rem;
+	background-color: black;
+	height: 5rem;
 }
 /* Logo Icon */
 nav .brand-logo {
-  font-size: 4.5rem;
+	font-size: 4.5rem;
 }
 nav ul li {
-  display: inline-block;
-  margin-left: 1rem;
+	display: inline-block;
+	margin-left: 1rem;
 }
 nav ul li a {
-  font-family: "Tektur", cursive;
-  text-decoration: 1px dotted whitesmoke underline;
+	font-family: "Tektur", cursive;
+	text-decoration: 1px dotted whitesmoke underline;
 }
 body {
-  background-color: #24292e;
+	background-color: #24292e;
 }
 
 h1 {
-  font-family: "Preahvihear", sans-serif;
-  text-align: center;
-  font-size: 5rem;
-  color: #f7dada;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  margin-bottom: 0px;
+	font-family: "Preahvihear", sans-serif;
+	text-align: center;
+	font-size: 5rem;
+	color: #f7dada;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	margin-bottom: 0px;
 }
 
 p {
-  font-family: "Roboto Mono", monospace;
-  font-size: 0.9rem;
-}
-
-button {
-  color: #b6b2bf;
-}
-
-/* Removing default button styles */
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
-  color: #b6b2bf;
-  background-color: #24292e;
-  transition: background-color 0.3s;
+	font-family: "Roboto Mono", monospace;
+	font-size: 0.9rem;
 }
 
 /* User Question Form */
 form.col.col.s12 {
-  height: auto;
-  width: 70rem;
-  background-color: black;
-  border-radius: 2rem;
-  padding: 8rem;
-}
-
-span.card-title.mentor-name {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-span.mentor-language {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-
-span.mentor-country {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 2rem;
-  font-weight: 400;
+	height: auto;
+	width: 70rem;
+	background-color: black;
+	border-radius: 2rem;
+	padding: 8rem;
 }
 
 div.col.l6.col.s12 {
-  margin-top: 5px;
+	margin-top: 5px;
 }
 
 div.col.l4.offset-l2.col.s12 {
-  margin-top: 5px;
+	margin-top: 5px;
 }
 /******************************************/
 /* Class Selectors */
 /******************************************/
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
 }
 
 /* Centering buttons relative to p tags */
 .button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .button-container a {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 /* Mentor Card Container */
 .mentor-card-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 80vh;
-}
-
-/* mentor card */
-.mentor-card {
-  display: flex;
-  justify-content: center;
-  width: 25%;
-}
-
-.card-action {
-  display: flex;
-  justify-content: center;
-}
-
-.card .card-action {
-  background: none;
-  padding: 10px;
-}
-
-.card {
-  border-radius: 1rem;
-  background-color: black;
-}
-
-/* Mentor Details */
-.card-content {
-  text-align: center;
-}
-
-.card-content span {
-  border-bottom: 2px solid;
-}
-
-.card .card-content {
-  padding-bottom: 0%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 80vh;
 }
 
 .col.s12 {
-  margin-top: 10rem;
+	margin-top: 10rem;
 }
 
 /* Mentor Self Image */
 .card .card-image img {
-  border-radius: 50%;
-  position: absolute;
-  top: -90px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100px;
-  width: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -90px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 100px;
+	width: 100px;
 }
 
 /* Add Mentor Button */
 .centered-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem;
 }
 
 .row {
-  margin-bottom: 0;
-  display: flex;
-  justify-content: center;
+	margin-bottom: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .input-field {
-  margin-bottom: 0px;
-  color: white;
+	margin-bottom: 0px;
+	color: white;
 }
 
 .card-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 25rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .modal {
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 2rem;
+	background-color: black;
+	border: 2px solid white;
+	border-radius: 2rem;
 }
 
 .card .card-content .card-title {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .footer-container {
-  padding: 10px;
+	padding: 10px;
 }
 
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  justify-content: space-between;
-  padding: 0%;
-  margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	justify-content: space-between;
+	padding: 0%;
+	margin-top: 1rem;
 }
 
 .footer-copyright {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+	display: flex;
+	justify-content: center;
+	align-self: center;
 }
 
 /* Tooltip above the add a new mentor btn  */
 .material-tooltip {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 600;
-  color: white;
-  background-color: black;
-  border: 3px solid white;
-  border-radius: 10px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 600;
+	color: white;
+	background-color: black;
+	border: 3px solid white;
+	border-radius: 10px;
 }
 /******************************************/
 /* ID Selectors */
 /******************************************/
 #mentorship-body {
-  background-color: #24292e;
+	background-color: #24292e;
 }
 
 #mentor-form {
-  padding: 2px;
-  margin: 2px;
+	padding: 2px;
+	margin: 2px;
 }
 
 #name {
-  color: white;
+	color: white;
 }
 
 #country {
-  color: white;
+	color: white;
 }
 
 #language {
-  color: white;
+	color: white;
 }
 
 #email {
-  color: white;
+	color: white;
 }
 /******************************************/
 /* Media queries */
 /******************************************/
 
 /******************************************/
+/* Styling for Card Content */
+/******************************************/
+.card-mentor {
+	background-color: #2c2f33;
+	border: 1px solid #444;
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.card-title.mentor-name,
+.mentor-language,
+.mentor-country {
+	font-family: none;
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+/******************************************/
+/* Styling for Mentor Packages */
+/******************************************/
+.mentor-packages {
+	background-color: #333;
+	margin-top: 20px;
+	padding: 15px;
+	border-radius: 8px;
+}
+
+.mentor-packages ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.mentor-packages li.package {
+	background-color: #454545;
+	border: 1px solid #575757;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.package-title {
+	font-size: 1.5rem;
+	color: #ffd700;
+	display: block;
+}
+
+.package-price {
+	font-size: 1.2rem;
+	color: #fff;
+}
+
+.package-details {
+	font-size: 0.9rem;
+	color: #ccc;
+}
+
+/******************************************/
+/* Styling for Card Action */
+/******************************************/
+.card-action {
+	background: none;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.card-action a button {
+	font-size: 1rem;
+	color: #fff;
+	background-color: #4caf50;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.card-action a button:hover {
+	background-color: #367c39;
+}
+
+/******************************************/
 /* Pseudo Classes and Elements */
 /******************************************/
 button:hover {
-  background-color: black;
-  color: red;
+	background-color: black;
+	color: red;
 }

@@ -1,220 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Spaces</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/icons/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/css/learn.css" />
-  </head>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-wrapper navbar">
-      <a href="./index.html" class="brand-logo center large material-icons"
-        >grain</a
-      >
-      <!-- Back to Home page btn -->
-      <a href="./index.html" class="large material-icons dropdown-button"
-        >first_page</a
-      >
-    </div>
-  </nav>
-  <body>
-    <!-- Stack Overflow Search Heading -->
-    <h1>Search Stack Overflow</h1>
-    <!-- Stack questions search bar -->
-    <div id="stack-search">
-      <div class="nav-wrapper">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required />
-            <label class="label-icon" for="search"
-              ><i class="material-icons">search</i></label
-            >
-            <a id="search-btn" class="waves-effect waves-light btn">Search</a>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Stack overflow Question display container -->
-    <div id="stack-container" class="row"></div>
-    <!-- Ask question Heading -->
-    <h1>Ask a question!</h1>
-    <div id="learn-container">
-      <!-- User Question Form -->
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input
-                placeholder="Jane"
-                id="first_name"
-                type="text"
-                class="validate"
-              />
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input
-                placeholder="Doe"
-                id="last_name"
-                type="text"
-                class="validate"
-              />
-              <label for="last_name">Last Name</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input
-                placeholder="HTML"
-                id="question_language"
-                type="text"
-                class="validate"
-              />
-              <label for="Language">Question Language:</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea
-                placeholder="How to change a document title in HTML?"
-                id="question-input"
-                class="materialize-textarea"
-              ></textarea>
-              <label for="question-input">Question:</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input
-                placeholder="JaneDoe@gmail.com"
-                id="email"
-                type="email"
-                class="validate"
-              />
-              <label for="email">Email</label>
-            </div>
-            <div class="row col s12">
-              <button
-                id="submit-question"
-                class="btn waves-effect waves-light"
-                type="submit"
-                name="action"
-              >
-                Submit Question
-                <i class="material-icons right">send</i>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <!-- Questions Container -->
-      <div id="QuestionsContainer">
-        <!-- Questions will be dynamically added here -->
-      </div>
-    </div>
-    <!-- Answer Modal Structure -->
-    <div id="modal2" class="modal">
-      <div id="modalContent" class="modal-content">
-        <h4>Provide Your Answer Below:</h4>
-        <input id="answer-text" type="text" />
-      </div>
-      <div class="modal-footer">
-        <a
-          id="submit-answer-btn"
-          class="modal-action modal-close waves-effect waves-green btn-flat"
-          >Submit Answer</a
-        >
-      </div>
-    </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="./assets/js/learn.js"></script>
-  </body>
-  <!-- Footer -->
-  <footer class="page-footer">
-    <div class="footer-container">
-      <div class="row">
-        <div class="col l6 s12">
-          <p class="grey-text text-lighten-4">
-            CodeHub SA is an innovative web application designed to foster
-            collaboration and learning within the coding community in South
-            Africa. The platform aims to provide aspiring developers with the
-            tools they need to improve their coding skills, connect with
-            experienced mentors, and participate in coding challenges to enhance
-            their expertise.
-          </p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Get In Touch!</h5>
-          <ul class="right-align">
-            <li>
-              <a
-                class="grey-text text-lighten-3"
-                href="mailto:jackspence.dev@gmail.com"
-              >
-                <i class="material-icons left">email</i
-                >jackspence.dev@gmail.com
-              </a>
-            </li>
-            <li style="margin-top: 5px">
-              <a
-                class="grey-text text-lighten-3"
-                href="https://github.com/Jackspence6"
-              >
-                <i class="fab fa-github left" style="font-size: 24px"></i
-                >@JackSpence6
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div>
-        <p>&copy; 2023 Jack Spence. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learning Spaces</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/icons/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/icons/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/icons/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/icons/site.webmanifest" />
+		<link rel="stylesheet" href="./assets/css/learn.css" />
+	</head>
+	<!-- Navigation Bar -->
+	<nav>
+		<div class="nav-wrapper navbar">
+			<a href="./index.html" class="brand-logo center large material-icons"
+				>grain</a
+			>
+			<!-- Back to Home page btn -->
+			<a href="./index.html" class="large material-icons dropdown-button"
+				>first_page</a
+			>
+		</div>
+	</nav>
+	<body>
+		<!-- Stack Overflow Search Heading -->
+		<h1>Search Stack Overflow</h1>
+		<!-- Stack questions search bar -->
+		<div id="stack-search">
+			<div class="nav-wrapper">
+				<form>
+					<div class="input-field">
+						<input id="search" type="search" required />
+						<label class="label-icon" for="search"
+							><i class="material-icons">search</i></label
+						>
+						<a id="search-btn" class="waves-effect waves-light btn">Search</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Stack overflow Question display container -->
+		<div id="stack-container" class="row"></div>
+		<!-- Ask question Heading -->
+		<h1>Ask a question!</h1>
+		<div id="learn-container">
+			<!-- User Question Form -->
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<input
+								placeholder="Dignity"
+								id="first_name"
+								type="text"
+								class="validate"
+							/>
+							<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col s6">
+							<input
+								placeholder="Paradza"
+								id="last_name"
+								type="text"
+								class="validate"
+							/>
+							<label for="last_name">Last Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								placeholder="C#"
+								id="question_language"
+								type="text"
+								class="validate"
+							/>
+							<label for="Language">Question Language:</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea
+								placeholder="How to change a document title in C#?"
+								id="question-input"
+								class="materialize-textarea"
+							></textarea>
+							<label for="question-input">Question:</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								placeholder="dignity.paradza@redandyellow.co.za"
+								id="email"
+								type="email"
+								class="validate"
+							/>
+							<label for="email">Email</label>
+						</div>
+						<div class="row col s12">
+							<button
+								id="submit-question"
+								class="btn waves-effect waves-light"
+								type="submit"
+								name="action"
+							>
+								Submit Question
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Questions Container -->
+			<div id="QuestionsContainer">
+				<!-- Questions will be dynamically added here -->
+			</div>
+		</div>
+		<!-- Answer Modal Structure -->
+		<div id="modal2" class="modal">
+			<div id="modalContent" class="modal-content">
+				<h4>Provide Your Answer Below:</h4>
+				<input id="answer-text" type="text" />
+			</div>
+			<div class="modal-footer">
+				<a
+					id="submit-answer-btn"
+					class="modal-action modal-close waves-effect waves-green btn-flat"
+					>Submit Answer</a
+				>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script src="./assets/js/learn.js"></script>
+	</body>
+	<!-- Footer -->
+	<footer class="page-footer">
+		<div class="footer-container">
+			<div class="row">
+				<div class="col l6 s12">
+					<p class="grey-text text-lighten-4">
+						CodeHub SA is an innovative web application designed to foster
+						collaboration and learning within the coding community in South
+						Africa. The platform aims to provide aspiring developers with the
+						tools they need to improve their coding skills, connect with
+						experienced mentors, and participate in coding challenges to enhance
+						their expertise.
+					</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Get In Touch!</h5>
+					<ul class="right-align">
+						<li>
+							<a
+								class="grey-text text-lighten-3"
+								href="mailto:jackspence.dev@gmail.com"
+							>
+								<i class="material-icons left">email</i>jackspence.dev@gmail.com
+							</a>
+						</li>
+						<li style="margin-top: 5px;">
+							<a
+								class="grey-text text-lighten-3"
+								href="https://github.com/Jackspence6"
+							>
+								<i class="fab fa-github left" style="font-size: 24px;"></i
+								>@JackSpence6
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div>
+				<p>&copy; 2024 Jack Spence. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 </html>
